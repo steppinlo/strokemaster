@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   end
   resources :courses
 
+  get   '/courses/:id/new' => 'scores#new'
+  post  '/courses/:id/new' => 'scores#create'
+
   root 'splash#index'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

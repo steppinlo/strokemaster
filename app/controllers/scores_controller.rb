@@ -3,6 +3,12 @@ class ScoresController < ApplicationController
 
   end
 
+  def new
+    @course = Course.find_by(id: params[:id])
+    @user = current_user
+    @score = current_user.scores
+  end
+
   def show
 
   end
