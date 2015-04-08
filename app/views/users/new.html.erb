@@ -1,0 +1,6 @@
+<h2>Create your profile today! </h2>
+<%= form_for :users, url: {action: "create"}, html: {class: "user_form"} do |f| %>
+  Username: <%= f.text_field :username, class: 'form-control'%><BR>
+  Password: <%= f.password_field :password, class: "form-control"%><BR>
+  <%= f.submit "Create" %>
+<% end %>

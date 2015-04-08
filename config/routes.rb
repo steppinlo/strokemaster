@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  resources :users
+  resources :users do
+    resources :courses
+  end
+  resources :courses
 
   root 'splash#index'
   get    'login'   => 'sessions#new'
